@@ -1,0 +1,22 @@
+.devteam-container img {
+    width: 100%;
+}
+/* .dev-team-grid {
+    height: 120px;
+    margin-bottom: -160px;
+}
+.dev-team-grid>div {
+    display: inline-block;
+    width: 23%;
+    vertical-align: top;
+    transform: scale(0.9);
+}
+
+.dev-team-grid>div.dev-first-item {
+    width: 26%;
+    margin-right: 24px;
+}
+
+.dev-team-grid>div.dev-first-item+div {
+    width: 26%;
+} */

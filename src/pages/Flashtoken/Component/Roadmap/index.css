@@ -1,0 +1,15 @@
+.roadmap-image{
+    width: 100%;
+    display: block;
+    margin: auto;
+    /* margin-bottom: -5px; */
+}
+.makeStyles-overlapIcon{
+    right:10%;
+    left:unset;
+    bottom: -20px;
+    position: absolute;
+}
+.roadmap-overlay{
+    width:100%;
+}
