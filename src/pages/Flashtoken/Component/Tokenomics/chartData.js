@@ -26,16 +26,10 @@ export const Options = {
 
         if(chartElement[0]?.index == 0){
             document.getElementById('marketing').style.color ='#5e95ff'
-            document.getElementById('burn').style.color ='#AF5E15'
-            document.getElementById('liquidity').style.color ='#05705C'
         }else if(chartElement[0]?.index == 1){
             document.getElementById('liquidity').style.color ='#039d82'
-            document.getElementById('marketing').style.color ='#4368b1'
-            document.getElementById('burn').style.color ='#AF5E15'
         }else if(chartElement[0]?.index == 2){
             document.getElementById('burn').style.color ='#FB7200'
-            document.getElementById('marketing').style.color ='#4368b1'
-            document.getElementById('liquidity').style.color ='#05705C'
         }else{
             document.getElementById('burn').style.color ='#AF5E15'
             document.getElementById('marketing').style.color ='#4368b1'
