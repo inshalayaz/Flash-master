@@ -6,6 +6,7 @@ import {
   Select,
   IconButton,
   Button,
+  CircularProgress
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
@@ -35,7 +36,15 @@ import AppButton from "../../../../components/AppButton";
 import EN from "../../../../assests/Images/WhitePaper - EN.pdf";
 import FR from "../../../../assests/Images/WhitePaper - FR.pdf";
 
+// Chart
+import { Doughnut } from 'react-chartjs-2';
+import {Data, Options, chartLabel} from './chartData'
+import {Chart, ArcElement, Legend} from 'chart.js'
+Chart.register(ArcElement, Legend, chartLabel);
+
+
 const Tokenomics = () => {
+  
   const classes = useStyles();
   return (
     <>
@@ -385,11 +394,33 @@ const Tokenomics = () => {
               item
               xs={12}
               md={6}
-              sx={{ display: "flex", justifyContent: "center" }}
+              sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
             >
-              <Box sx={{ width: { lg: "100%", xs: "70%" } }}>
-                <img className="tokenomics-image" src={tokenomicsVisual} />
-              </Box>
+              <Grid xs={12} md={8}>
+                <Box sx={{ width: { lg: "100%", xs: "70%" }, height: { lg: "80%" } }}>
+                  <Doughnut data={Data} options={Options} />
+                </Box>
+              </Grid>
+              <Grid xs={12} md={4}>
+                <Grid xs={12} md={12} mt={3}>
+                  <div style={{ display: 'flex'}}>
+                    <CircularProgress thickness="6" variant="determinate" id="marketing" value={100} style={{'color': '#4368b1'}} />
+                    <Typography style={{ alignSelf: "center" }} variant="h6" ml={1}>5% Marketing</Typography>
+                  </div>
+                </Grid>
+                <Grid xs={12} md={12} mt={3}>
+                  <div style={{ display: 'flex'}}>
+                    <CircularProgress thickness="6" variant="determinate" id="liquidity" value={100} style={{'color': '#05705C'}} />
+                    <Typography style={{ alignSelf: "center" }} variant="h6" ml={1}>1% Liquidity</Typography>
+                  </div>
+                </Grid>
+                <Grid xs={12} md={12} mt={3}>
+                  <div style={{ display: 'flex'}}>
+                    <CircularProgress thickness="6" variant="determinate" id="burn" value={100} style={{'color': '#AF5E15'}} />
+                    <Typography style={{ alignSelf: "center" }} variant="h6" ml={1}>1% Burn</Typography>
+                  </div>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
