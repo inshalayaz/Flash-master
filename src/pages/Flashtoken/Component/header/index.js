@@ -5,6 +5,7 @@ import {
   MenuItem,
   Select,
   IconButton,
+  InputLabel
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
@@ -13,20 +14,21 @@ import LinearProgress, {
 } from "@mui/material/LinearProgress";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Box } from "@mui/system";
-import React from "react";
+import {useState} from "react";
 import { useStyles } from "../../../../Styles";
 import FlashLogo from "../../../../assests/Logo/flash-logosvg.svg";
 
 // import Flag from "../../assests/Logo/Flag.svg";
 import AmericanFlag from "../../../../assests/Images/flag.png";
-import AmericanFlag2 from "../../../../assests/Images/flag2.png";
 
-import smileyIcon from "../../../../assests/Images/smiley-icon.png";
-import arrowDown from "../../../../assests/Images/arrow-down.png";
+import FranceFlag from "../../../../assests/Images/franceFlag.png"
+
 import arrowDownIcon from "../../../../assests/Images/arrow-chevron.png";
 
 import AppButton from "../../../../components/AppButton";
 // import MobileDrawer from "../MobileDrawer";
+
+import './style.css'
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
@@ -43,6 +45,11 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 
 const FTheader = () => {
   const classes = useStyles();
+  const [lang, setLang] = useState('US')
+
+  const handleChange = (e) => {
+    setLang(e.target.value)
+  }
   const Navs = [
     {
       name: " Our services",
@@ -290,7 +297,7 @@ const FTheader = () => {
                   }}
                 >
                   <img
-                    src={AmericanFlag}
+                    src={lang == "US" ? AmericanFlag : FranceFlag}
                     style={{
                       width: "27px",
                       height: "27px",
@@ -308,33 +315,17 @@ const FTheader = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Typography sx={{ color: "white", marginRight: "10px" }}>
-                    EN
-                  </Typography>
-                  <img src={arrowDown} className="arrow-down" />
-                  {/* <Select
-                    sx={{
-                      // width: "120px",
-                      // margin: "0px 10px",
-                      fontSize: "14px",
-                      color: "white",
-
-                      fontWeight: "500",
-                    }}
-                    inputProps={{
-                      classes: {
-                        icon: { fill: "white" },
-                      },
-                    }}
-                    variant="standard"
-                    disableUnderline
-                    displayEmpty
+                  <Select
+                    labelId="lang"
+                    id="lang"
+                    value={lang}
+                    label="Age"
+                    onChange={handleChange}
+                    style={{color: '#ffffff', outline: 0}}
                   >
-                    <MenuItem value="">August 2018</MenuItem>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                  </Select> */}
+                    <MenuItem defaultChecked value={'US'}>US</MenuItem>
+                    <MenuItem value={'FR'}>FR</MenuItem>
+                  </Select>
                 </FormControl>
 
                 <Box sx={{ display: { lg: "flex", xs: "none" } }}>
