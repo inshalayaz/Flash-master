@@ -1,20 +1,28 @@
-.tokenomics-image{
-    width:100%;
+.tokenomics-image {
+    width: 100%;
 }
 
 
-.audit-flash-button img{
+.audit-flash-button img {
     border-radius: 50px;
-height: 60px;
+    height: 60px;
 }
 
 
-.add-filter{
-    filter:blur(21.5px);
+.add-filter {
+    filter: blur(21.5px);
 }
 
-.soon{
+.soon {
     position: absolute;
     left: 45%;
     top: 50%;
+}
+
+@media only screen and (max-width: 768px){
+    .soon{
+        font-size: 30px!important;
+        left: 40%;
+        top: 30%;
+    }
 }
