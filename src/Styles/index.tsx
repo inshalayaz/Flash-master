@@ -2530,7 +2530,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
   tokenomicsbullets: {
 
+  },
+  blurTransferComponent: {
+    filter: 'blur(10px)'
   }
-
 
 }))

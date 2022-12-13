@@ -25,11 +25,17 @@ export const Options = {
         console.log(chartElement)
 
         if(chartElement[0]?.index == 0){
-            document.getElementById('marketing').style.color ='#5e95ff'
+            let marketing = document.getElementById('marketing') 
+            marketing.style.color ='#5e95ff'
+            marketing.style.transition = "300ms linear all"
         }else if(chartElement[0]?.index == 1){
-            document.getElementById('liquidity').style.color ='#039d82'
+            let liquidity = document.getElementById('liquidity') 
+            liquidity.style.color ='#039d82'
+            liquidity.style.transition = "300ms linear all"
         }else if(chartElement[0]?.index == 2){
-            document.getElementById('burn').style.color ='#FB7200'
+            let burn = document.getElementById('burn')
+            burn.style.color ='#FB7200'
+            burn.style.transition = "300ms linear all"
         }else{
             document.getElementById('burn').style.color ='#AF5E15'
             document.getElementById('marketing').style.color ='#4368b1'

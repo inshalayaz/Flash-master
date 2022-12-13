@@ -21,7 +21,7 @@ import Faq from "./Component/Faq";
 import ContactUs from "./Component/ContactUs";
 import HeaderTopBar from "./Component/HeaderTopBar";
 import bannerBackground from "../../assests/Images/banner-background.png";
-
+import Carousel from 'react-material-ui-carousel'
 import "./index.css";
 
 import tokenomicsBack from "../../assests/Images/tokenomics-back.jpg";
@@ -77,7 +77,10 @@ const FlashToken = () => {
               backgroundSize: "cover",
             }}
           >
-            <Tokenomics />
+            <Carousel navButtonsAlwaysVisible={true} autoPlay={false}>
+              <Tokenomics isTransfer={false}/>
+              <Tokenomics isTransfer={true} />
+            </Carousel>
           </Grid>
           <Grid sx={{ backgroundColor: "#181818" }}>
             <FlashRecharge />

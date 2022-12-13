@@ -12,3 +12,9 @@ height: 60px;
 .add-filter{
     filter:blur(21.5px);
 }
+
+.soon{
+    position: absolute;
+    left: 45%;
+    top: 50%;
+}

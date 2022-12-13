@@ -43,7 +43,7 @@ import {Chart, ArcElement, Legend} from 'chart.js'
 Chart.register(ArcElement, Legend, chartLabel);
 
 
-const Tokenomics = () => {
+const Tokenomics = ({isTransfer = false}) => {
   
   const classes = useStyles();
   return (
@@ -59,12 +59,17 @@ const Tokenomics = () => {
           padding: { lg: "60px 0", xs: "30px 0 0 0" },
         }}
       >
+          {
+            isTransfer && (
+              <Typography variant="h3" className="soon">Soon</Typography>
+            )
+          }
         <Grid
           item
           xs={12}
           md={12}
-          sx={{ display: "flex", justifyContent: "center" }}
-        >
+          sx={{ display: "flex", justifyContent: "center", position: 'relative' }}
+        > 
           <Grid
             item
             xs={12}
@@ -113,6 +118,7 @@ const Tokenomics = () => {
             justifyContent: "center",
             padding: "0px 20px",
           }}
+          className={isTransfer ? classes.blurTransferComponent : ''}
         >
           <Grid
             item
@@ -157,7 +163,7 @@ const Tokenomics = () => {
                   }}
                 >
                   Tokenomics{" "}
-                  <span style={{ color: "#FBBF04" }}>Flash Token</span>
+                  <span style={{ color: "#FBBF04" }}>{isTransfer ? "Flash Transfer" : "Flash Token"}</span>
                 </Typography>
                 <Typography
                   sx={{

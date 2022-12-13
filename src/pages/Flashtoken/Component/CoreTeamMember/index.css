@@ -21,6 +21,16 @@
     align-items: flex-start;
 
 }
+
+.member_core > img {
+    transition: 300ms linear all;
+}
+.member_core > img:hover {
+    background: #FBBF04;
+    border-radius: 50%;
+    transition: 300ms linear all;
+}
+
 .member-data {
     min-height: 50px;
     /* align-items: center;

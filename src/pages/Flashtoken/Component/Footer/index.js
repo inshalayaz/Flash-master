@@ -29,9 +29,6 @@ const Footer = () => {
   ];
   const list2 = [
     {
-      url: "Pitch Deck",
-    },
-    {
       url: "Whitepaper",
     },
     {
@@ -45,9 +42,6 @@ const Footer = () => {
     },
   ];
   const list3 = [
-    {
-      url: "Terms of Use",
-    },
     {
       url: "Privacy Policy",
     },

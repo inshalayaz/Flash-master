@@ -1,6 +1,17 @@
 .devteam-container img {
     width: 100%;
 }
+
+.member_core > div > img {
+    transition: 300ms linear all;
+}
+
+.member_core > div >img:hover {
+    background: #FBBF04;
+    border-radius: 50%;
+    transition: 300ms linear all;
+}
+
 /* .dev-team-grid {
     height: 120px;
     margin-bottom: -160px;
