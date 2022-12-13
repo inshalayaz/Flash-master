@@ -1,44 +1,31 @@
 import {
   Typography,
   Grid,
-  FormControl,
-  MenuItem,
-  Select,
   IconButton,
-  Button,
   CircularProgress
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { useStyles } from "../../../../Styles";
-import FlashLogo from "../../../../assests/Logo/Flashlogo.png";
 // import Flag from "../../assests/Logo/Flag.svg";
 
-import tokenomicsVisual from "../../../../assests/Images/Group 1000001267.png";
-
-import BuyFlashCTA from "../../../../assests/Images/BuyFlashCTA.png";
-import AuditFlashCTA from "../../../../assests/Images/audit-flash-icon.png";
 import AuditFlashImage from "../../../../assests/Images/audit-icon.png";
 import cat from "../../../../assests/Images/cat.png";
 import led from "../../../../assests/Images/led.png";
 import paper from "../../../../assests/Images/paper.png";
 
-import UsingMetamaskCTA from "../../../../assests/Images/UsingMetamaskCTA.png";
-import WhitepaperCTA from "../../../../assests/Images/WhitepaperCTA.png";
-import PitchDeckCTA from "../../../../assests/Images/PitchDeckCTA.png";
-// import tokenomicsBack from '../../../../assests/Images/tokenomics-background.jpg';
+
 import copy from "../../../../assests/Images/copy.png";
 import flashbtn from "../../../../assests/Images/flashbtn.png";
-import "./index.css";
 
-import AppButton from "../../../../components/AppButton";
 // import MobileDrawer from "../MobileDrawer";
 import EN from "../../../../assests/Images/WhitePaper - EN.pdf";
 import FR from "../../../../assests/Images/WhitePaper - FR.pdf";
 
+import "./index.css";
 // Chart
 import { Doughnut } from 'react-chartjs-2';
-import {Data, Options, chartLabel, transferChartLabel} from './chartData'
+import {Data, Options, chartLabel, transferChartLabel,  TransferChartData} from './chartData'
 import {Chart, ArcElement, Legend} from 'chart.js'
 Chart.register(ArcElement, Legend);
 
@@ -405,7 +392,7 @@ const Tokenomics = ({isTransfer = false}) => {
               <Grid xs={12} md={8}>
                 <Box sx={{ width: { lg: "100%", xs: "70%" }, height: { lg: "80%" } }}>
                 {
-                  !isTransfer ? <Doughnut data={Data} options={Options} plugins={[chartLabel]}/> : <Doughnut data={Data} options={Options} plugins={[transferChartLabel]}/>
+                  !isTransfer ? <Doughnut data={Data} options={Options} plugins={[chartLabel]}/> : <Doughnut data={TransferChartData} options={Options} plugins={[transferChartLabel]}/>
                 }
                   
                 </Box>

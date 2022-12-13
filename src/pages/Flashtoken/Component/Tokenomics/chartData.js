@@ -12,6 +12,20 @@ export const Data = {
         }
     ]
 }
+export const TransferChartData = {
+    labels: ["1% Marketing", "1% Liquidity", "1% Burn"],
+    datasets: [
+        {
+            label: "Flash Token",
+            data: [3, 4, 3],
+            backgroundColor: [ "#4368b1", "#05705C", "#AF5E15"],
+            borderColor: [ "#4368b1", "#05705C", "#AF5E15"],
+            hoverOffset: 4,
+            hoverBackgroundColor:["#5e95ff", "#039d82", "#FB7200" ]
+            
+        }
+    ]
+}
 
 export const Options = {
     cutout: 165,
