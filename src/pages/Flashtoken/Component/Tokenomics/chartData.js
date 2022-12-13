@@ -64,7 +64,37 @@ export const chartLabel = {
       ctx.fillText(text, textX, textY);
       ctx.save();
 
-      var fontSize = (height / 400).toFixed(2);
+       fontSize = (height / 400).toFixed(2);
+      ctx.font = fontSize + "em sans-serif";
+      ctx.textBaseline = "middle";
+      var text = "TRANSACTION FEES",
+          textX = Math.round((width - ctx.measureText(text).width) / 2),
+          textY = height/1.8;
+          ctx.fillStyle = "rgba(255,255,255,0.5)f"
+      ctx.fillText(text, textX, textY);
+      ctx.save();
+    }
+}
+export const transferChartLabel = {
+    id: "center-label",
+    beforeDraw: function(chart) {
+
+     let width = chart.width
+     let height = chart.height
+     let ctx = chart.ctx
+     
+     ctx.restore()
+     var fontSize = (height / 114).toFixed(2);
+      ctx.font = fontSize + "em sans-serif";
+      ctx.textBaseline = "middle";
+      var text = "3%",
+          textX = Math.round((width - ctx.measureText(text).width) / 2),
+          textY = height / 2.5;
+          ctx.fillStyle = "rgba(255,255,255,0.7)"
+      ctx.fillText(text, textX, textY);
+      ctx.save();
+
+       fontSize = (height / 400).toFixed(2);
       ctx.font = fontSize + "em sans-serif";
       ctx.textBaseline = "middle";
       var text = "TRANSACTION FEES",

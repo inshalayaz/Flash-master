@@ -38,9 +38,9 @@ import FR from "../../../../assests/Images/WhitePaper - FR.pdf";
 
 // Chart
 import { Doughnut } from 'react-chartjs-2';
-import {Data, Options, chartLabel} from './chartData'
+import {Data, Options, chartLabel, transferChartLabel} from './chartData'
 import {Chart, ArcElement, Legend} from 'chart.js'
-Chart.register(ArcElement, Legend, chartLabel);
+Chart.register(ArcElement, Legend);
 
 
 const Tokenomics = ({isTransfer = false}) => {
@@ -59,11 +59,10 @@ const Tokenomics = ({isTransfer = false}) => {
           padding: { lg: "60px 0", xs: "30px 0 0 0" },
         }}
       >
-          {
-            isTransfer && (
-              <Typography variant="h3" className="soon">Soon</Typography>
-            )
-          }
+      {
+        isTransfer && <Typography variant="h3" className="soon">SOON</Typography>
+
+      }
         <Grid
           item
           xs={12}
@@ -370,6 +369,7 @@ const Tokenomics = ({isTransfer = false}) => {
                       href="https://app.solidproof.io/projects/flash-transfer?audit_id=107"
                       target="_blank"
                       style={{ textDecoration: "none" }}
+                      rel="noreferrer"
                     >
                       <IconButton
                         className="iconbutton"
@@ -404,7 +404,10 @@ const Tokenomics = ({isTransfer = false}) => {
             >
               <Grid xs={12} md={8}>
                 <Box sx={{ width: { lg: "100%", xs: "70%" }, height: { lg: "80%" } }}>
-                  <Doughnut data={Data} options={Options} />
+                {
+                  !isTransfer ? <Doughnut data={Data} options={Options} plugins={[chartLabel]}/> : <Doughnut data={Data} options={Options} plugins={[transferChartLabel]}/>
+                }
+                  
                 </Box>
               </Grid>
               <Grid xs={12} md={4}>
