@@ -4,8 +4,8 @@ export const Data = {
         {
             label: "Flash Token",
             data: [3, 4, 3],
-            backgroundColor: [ "#4368b1", "#05705C", "#AF5E15"],
-            borderColor: [ "#4368b1", "#05705C", "#AF5E15"],
+            backgroundColor: [ "#5E95FF", "#039D81", "#FF8D08"],
+            borderColor: [ "#5E95FF", "#039D81", "#FF8D08"],
             hoverOffset: 4,
             hoverBackgroundColor:["#5e95ff", "#039d82", "#FB7200" ]
             
@@ -18,10 +18,10 @@ export const TransferChartData = {
         {
             label: "Flash Token",
             data: [3, 4, 3],
-            backgroundColor: [ "#4368b1", "#05705C", "#AF5E15"],
-            borderColor: [ "#4368b1", "#05705C", "#AF5E15"],
+            backgroundColor: [ "#5E95FF", "#039D81", "#FF8D08"],
+            borderColor: [ "#5E95FF", "#039D81", "#FF8D08"],
             hoverOffset: 4,
-            hoverBackgroundColor:["#5e95ff", "#039d82", "#FB7200" ]
+            hoverBackgroundColor:["#6396F7", "#0D9E7D", "#FB7200" ]
             
         }
     ]
@@ -40,20 +40,20 @@ export const Options = {
 
         if(chartElement[0]?.index == 0){
             let marketing = document.getElementById('marketing') 
-            marketing.style.color ='#5e95ff'
+            marketing.style.color ='#6396F7'
             marketing.style.transition = "300ms linear all"
         }else if(chartElement[0]?.index == 1){
             let liquidity = document.getElementById('liquidity') 
-            liquidity.style.color ='#039d82'
+            liquidity.style.color ='#0D9E7D'
             liquidity.style.transition = "300ms linear all"
         }else if(chartElement[0]?.index == 2){
             let burn = document.getElementById('burn')
             burn.style.color ='#FB7200'
             burn.style.transition = "300ms linear all"
         }else{
-            document.getElementById('burn').style.color ='#AF5E15'
-            document.getElementById('marketing').style.color ='#4368b1'
-            document.getElementById('liquidity').style.color ='#05705C'
+            document.getElementById('burn').style.color ='#FF8D08'
+            document.getElementById('marketing').style.color ='#5E95FF'
+            document.getElementById('liquidity').style.color ='#039d82'
         }
         event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default'
     }

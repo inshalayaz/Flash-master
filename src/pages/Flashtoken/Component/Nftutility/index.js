@@ -2,10 +2,14 @@ import { Typography, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { useStyles } from "../../../../Styles";
-import one from "../../../../assests/Images/3d1.png";
-import two from "../../../../assests/Images/3d2.png";
-import three from "../../../../assests/Images/3d3.png";
-import four from "../../../../assests/Images/3d4.png";
+// import one from "../../../../assests/Images/3d1.png";
+// import two from "../../../../assests/Images/3d2.png";
+// import three from "../../../../assests/Images/3d3.png";
+// import four from "../../../../assests/Images/3d4.png";
+import one from "../../../../assests/Images/Legendaire_Noir_Airdrop_1.png"
+import two from "../../../../assests/Images/Legendaire_Noir_Ranking_1.png"
+import three from "../../../../assests/Images/Legendaire_Ice_Fee_Reduction_1.png"
+import four from "../../../../assests/Images/image_67.png"
 import line3 from "../../../../assests/Images/Line3.png";
 
 import flashappOveralIcon from "../../../../assests/Images/flasapp-hanging-icon.png";

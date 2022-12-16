@@ -400,20 +400,26 @@ const Tokenomics = ({isTransfer = false}) => {
               <Grid xs={12} md={4}>
                 <Grid xs={12} md={12} mt={3}>
                   <div style={{ display: 'flex'}}>
-                    <CircularProgress thickness="6" variant="determinate" id="marketing" value={100} style={{'color': '#4368b1'}} />
+                    <CircularProgress thickness="6" variant="determinate" id="marketing" value={100} style={{'color': '#5E95FF'}} />
                     <Typography style={{ alignSelf: "center" }} variant="h6" ml={1}>5% Marketing</Typography>
                   </div>
                 </Grid>
                 <Grid xs={12} md={12} mt={3}>
                   <div style={{ display: 'flex'}}>
-                    <CircularProgress thickness="6" variant="determinate" id="liquidity" value={100} style={{'color': '#05705C'}} />
+                    <CircularProgress thickness="6" variant="determinate" id="liquidity" value={100} style={{'color': '#039D81'}} />
                     <Typography style={{ alignSelf: "center" }} variant="h6" ml={1}>1% Liquidity</Typography>
                   </div>
                 </Grid>
                 <Grid xs={12} md={12} mt={3}>
                   <div style={{ display: 'flex'}}>
-                    <CircularProgress thickness="6" variant="determinate" id="burn" value={100} style={{'color': '#AF5E15'}} />
+                    <CircularProgress thickness="6" variant="determinate" id="burn" value={100} style={{'color': '#FF8D08'}} />
                     <Typography style={{ alignSelf: "center" }} variant="h6" ml={1}>1% Burn</Typography>
+                  </div>
+                </Grid>
+                <Grid xs={12} md={12} mt={3}>
+                  <div style={{ display: 'flex'}}>
+                    <CircularProgress thickness="6" variant="determinate" id="burn" value={100} style={{'color': '#FF0808'}} />
+                    <Typography style={{ alignSelf: "center" }} variant="h6" ml={1}>3% Rewards</Typography>
                   </div>
                 </Grid>
               </Grid>
