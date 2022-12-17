@@ -2,6 +2,10 @@ import { Typography, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { useStyles } from "../../../../Styles";
+// import core1 from "../../../../assests/team_pictures/core1.png";
+// import core2 from "../../../../assests/team_pictures/core2.jpg";
+// import core3 from "../../../../assests/team_pictures/core3.png";
+// import core4 from "../../../../assests/team_pictures/core4.JPG";
 import core1 from "../../../../assests/Images/core1.png";
 import core2 from "../../../../assests/Images/core2.png";
 import core3 from "../../../../assests/Images/core3.png";
@@ -22,6 +26,7 @@ import coreteam4 from "../../../../assests/Images/coreteam4.png";
 import "./index.css";
 
 import AppButton from "../../../../components/AppButton";
+import Avatar from "@mui/material/Avatar";
 // import MobileDrawer from "../MobileDrawer";
 
 const CoreTeamMember = () => {
@@ -104,7 +109,7 @@ const CoreTeamMember = () => {
         >
           <Grid item xs={12} md={4} sm={12}>
             <Box className="member_core">
-              <img src={core4} />
+              <Avatar src={core4} sx={{ width: 110, height: 110 }} />
               <Box sx={{ ml: "14px", mt: "15px" }}>
                 <Typography
                   sx={{
@@ -150,7 +155,7 @@ const CoreTeamMember = () => {
           </Grid>
           <Grid item xs={12} md={4} sm={12} className="resize-team">
             <Box className="member_core">
-              <img src={core3} />
+            <Avatar src={core3} sx={{ width: 110, height: 110 }} />
               <Box sx={{ ml: "14px", mt: "15px" }}>
                 <Typography
                   sx={{
@@ -189,8 +194,7 @@ const CoreTeamMember = () => {
           </Grid>
           <Grid item xs={12} md={4} sm={12} className="resize-team1" sx={{}}>
             <Box className="member_core">
-              <img src={thirdcoreteam} />
-
+            <Avatar src={core2} sx={{ width: 110, height: 110 }} />
               <Box sx={{ ml: "14px", mt: "15px" }}>
                 <Typography
                   sx={{
@@ -238,8 +242,8 @@ const CoreTeamMember = () => {
           </Grid>
           <Grid item xs={12} md={4} sm={12}>
             <Box className="member_core">
-              <img src={core1} />
-              <Box sx={{ ml: "14px", mt: "15px" }}>
+            <Avatar src={core1} sx={{ width: 110, height: 110 }} />
+                <Box sx={{ ml: "14px", mt: "15px" }}>
                 <Typography
                   sx={{
                     fontFamily: "Manrope !important",

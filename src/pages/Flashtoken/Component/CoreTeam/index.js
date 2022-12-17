@@ -15,7 +15,6 @@ import partner22 from "../../../../assests/Images/partner22.png";
 import partner23 from "../../../../assests/Images/partner23.png";
 import partner24 from "../../../../assests/Images/huawei.png";
 import partner25 from "../../../../assests/Images/partner25.png";
-import core1 from '../../../../assests/team_pictures/core_1.JPG'
 import flashappOveralIcon from "../../../../assests/Images/flasapp-hanging-icon.png";
 import { motion } from "framer-motion";
 import "./index.css";
@@ -27,7 +26,7 @@ const CoreTeams = () => {
   const classes = useStyles();
   const list1 = [
     {
-      img: core1,
+      img: partner1,
     },
     // {
     //   img: partner2,
@@ -297,7 +296,7 @@ const CoreTeams = () => {
                       className="animated-div"
                     >
                       <Box>
-                         <img src={i.img} />
+                        <img src={i.img} />
                       </Box>
                     </motion.button>
                   </Box>

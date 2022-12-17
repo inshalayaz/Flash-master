@@ -19,16 +19,16 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-
+    transition: 300ms linear all;
 }
 
 .member_core > img {
-    transition: 300ms linear all;
+    transition: 500ms linear all;
 }
 .member_core > img:hover {
     background: #FBBF04;
     border-radius: 50%;
-    transition: 300ms linear all;
+    transition: 500ms linear all;
 }
 
 .member-data {

@@ -77,7 +77,7 @@ const FlashToken = () => {
               backgroundSize: "cover",
             }}
           >
-            <Carousel navButtonsAlwaysVisible={true} autoPlay={false}>
+            <Carousel navButtonsAlwaysVisible={true} autoPlay={false} >
               <Tokenomics isTransfer={false}/>
               <Tokenomics isTransfer={true} />
             </Carousel>
