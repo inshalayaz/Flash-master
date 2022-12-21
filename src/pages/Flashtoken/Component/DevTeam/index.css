@@ -3,13 +3,14 @@
 }
 
 .member_core > div > img {
-    border-radius: 50%; 
+    /* border-radius: 50%;  */
     transition: 300ms linear all;
 }
 
 .member_core > div >img:hover {
     transition: 300ms linear all;
-    border-left: 10px solid #FBBF04;
+    background-color: #FBBF04;
+    border-radius: 50%;
 }
 
 /* .dev-team-grid {

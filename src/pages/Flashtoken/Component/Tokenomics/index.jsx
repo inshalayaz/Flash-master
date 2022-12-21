@@ -416,12 +416,16 @@ const Tokenomics = ({isTransfer = false}) => {
                     <Typography style={{ alignSelf: "center" }} variant="h6" ml={1}>1% Burn</Typography>
                   </div>
                 </Grid>
-                <Grid xs={12} md={12} mt={3}>
-                  <div style={{ display: 'flex'}}>
-                    <CircularProgress thickness="6" variant="determinate" id="burn" value={100} style={{'color': '#FF0808'}} />
-                    <Typography style={{ alignSelf: "center" }} variant="h6" ml={1}>3% Rewards</Typography>
-                  </div>
-                </Grid>
+                {
+                  !isTransfer && (
+                    <Grid xs={12} md={12} mt={3}>
+                      <div style={{ display: 'flex'}}>
+                        <CircularProgress thickness="6" variant="determinate" id="reward" value={100} style={{'color': '#FF0808'}} />
+                        <Typography style={{ alignSelf: "center" }} variant="h6" ml={1}>3% Rewards</Typography>
+                      </div>
+                    </Grid>
+                  )
+                }
               </Grid>
             </Grid>
           </Grid>
